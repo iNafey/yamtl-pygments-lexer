@@ -5,7 +5,7 @@
 
 If you want to install it from PyPI:
 ```
-pip install pygments-epsilon
+pip install yamtl-pygments-lexer
 ```
 
 **OR**
