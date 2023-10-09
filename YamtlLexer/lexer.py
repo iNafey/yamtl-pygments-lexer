@@ -33,8 +33,8 @@ class YamtlGroovyLexer(GroovyLexer):
             # Add YAMTL Keywords here
             (r'ruleStore|helperStore', Keyword.Declaration),
             (r'(?<= |\[|,)(rule|staticAttribute|staticOperation|contextualOperation)', Name.Class),
-            (r'(\.)(in)', bygroups(Operator, Comment.Preproc)),
-            (r'(\.)(out)', bygroups(Operator, Comment.Preproc)),
+            (r'(\.)(in)(\()', bygroups(Operator, Comment.Preproc, Operator)),
+            (r'(\.)(out)(\()', bygroups(Operator, Comment.Preproc, Operator)),
             (r'fetch(?=\()', Name.Entity),
             (r'EPackage|EObject|EClass', Name.Builtin),
             (r'((?<=\)\.)\w+(?=\()|(?<=(  \.))\w+(?=\()|(?<=(\.))\w+(?=\())', Name.Builtin), #May not work with latest Pygments version
