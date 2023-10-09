@@ -29,7 +29,7 @@ To use any of the YAMTL lexers, you need to have Pygments installed (so you can 
 
 Where ``LexerAlias`` is the alias of the lexer you want to use (e.g. ``yamtl-groovy`` for Groovy-variant of YAMTL) and ``RelativePathToFile`` is the relative path to the file you want to highlight.
 
-For example, if you want to highlight the file ``test.groovy`` using the EGL lexer, you would use:
+For example, if you want to highlight the file ``test.groovy`` using the Groovy-flavoured YAMTL lexer, you would use:
 
 ```
  pygmentize -l yamtl-groovy -x test_scripts/test.groovy
