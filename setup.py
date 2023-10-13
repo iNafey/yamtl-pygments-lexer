@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup (
   name='yamtl-pygments-lexer',
-  version='1.0',
+  version='1.1',
   description='Pygments lexer for YAMTL variants.',
   long_description=open('README.md').read(),
   long_description_content_type='text/markdown',
