@@ -1,5 +1,5 @@
 # YAMTL Plugin for Pygments
-[Pygments](https://pygments.org/) lexer support for YAMTL variants (ready to use with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/))
+[Pygments](https://pygments.org/) lexer support for YAMTL variants (ready to use with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)). YAMTL is a model transformation language. To learn more about YAMTL, head over to the [official documentation](https://yamtl.github.io/).
 
 ## Installation
 

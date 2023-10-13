@@ -6,7 +6,6 @@ The following instructions are for maintaining the package. These include topics
 * MkDocs Material token styles cheatsheet
 * How to package the yamtl-pygments-lexer plugin
 * How to deploy the plugin to PyPI
-* How to add custom styles in MkDocs Material
 
 
 ## Edit/Update the YAMTL Lexer
@@ -46,6 +45,8 @@ Note: some tokens have separate styles for light and dark themes. Alternate colo
 
 I have not included all the tokens here but these are the most commonly used ones with a variety of colors in MkDocs Material. The colors can also be found in the [MkDocs Material Code Blocks section](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-syntax-theme). You can always use 'Inspect Element' to find the CSS token style (MkDocs Material Styles as defined above) for a particular element in the code block used in any documentation using MkDocs Material.
 
+Refer to the MkDocs Material documentation above to see how you can update the stylesheets for the MkDocs Material project. Make sure to test this on a local version of your documentation site before deploying it to the live site (e.g. your-site.github.io).
+
 ## Package the yamtl-pygments-lexer Plugin
 
 In order to create an executable package that works with the Pygments `pygmentize` command, you need to clone the repo, head over to the root directory and run the command: `sudo python setup.py develop`. This will create a symlink to the plugin in your system. You can then use the `pygmentize` command to highlight YAMTL files. For example, `pygmentize -l yamtl-groovy -x test_scripts/test.groovy` will highlight the input file in the terminal. Once this is successful, you can use the updated YAMTL lexer with the local MkDocs Material documentation (i.e. one that runs on localhost).
@@ -58,8 +59,4 @@ Since you created a new version of the plugin, you need to mention this in the `
 
 Make sure you have `build` installed using `pip install --upgrade build`. Make sure the `yamtl-pygments-lexer` directory is clean of any build or distribution directories. Then run `python -m build`. Which will create a distribution wheel that you can upload to PyPI.
 
-You need to install `twine` utility package for uploading Python packages to PyPI with ease. You can install it using `pip install twine`. Then go to your project's root directory and run `twine check` to see if the long description of the `setup.py` will be rendered properly (this description is the README.md of the Git repo where the plugin in hosted). Once that check is passed then you can run `twine upload dist/*` to upload the package to PyPI. You will need to enter your PyPI credentials to complete the upload.
-
-## Add Custom Styles in MkDocs Material
-
-Refer to the MkDocs Material documentation on [customizing your own syntax theme](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-syntax-theme) to see how you can update the stylesheets for the MkDocs Material project. Make sure to test this on a local version of your documentation site before deploying it to the live site (e.g. your-site.github.io).
+You need to install `twine` utility package for uploading Python packages to PyPI with ease. You can install it using `pip install twine`. Then go to your project's root directory and run `twine check` to see if the long description of the `setup.py` will be rendered properly (this description is the README.md of the Git repo where the plugin is hosted). Once that check is passed then you can run `twine upload dist/*` to upload the package to PyPI. You will need to enter your PyPI credentials to complete the upload.
